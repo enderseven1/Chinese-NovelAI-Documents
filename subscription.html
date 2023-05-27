@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Subscription - NovelAI 帮助文档</title>
+
+
+    <!-- Custom HTML head -->
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="NovelAI text and image generation documentation and guidebook.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <link
+        href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" href="tomorrow-night.css">
+    <link rel="stylesheet" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+
+</head>
+
+<body>
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var path_to_root = "";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+    </script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('light')
+        html.classList.add(theme);
+        html.classList.add('js');
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <h1 class="menu-title">
+                <div class="nai-icon"><svg width="118" height="143" viewBox="0 0 118 143" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19.8521 111.571C14.9909 103.761 9.08889 97.2271 2.14617 92.6282C-0.129986 91.1205 -0.706675 87.8117 0.95396 85.6446C13.8489 68.8166 33.5273 26.658 44.3824 2.38697C46.1611 -1.58993 52.2575 -0.299101 52.2575 4.05743V66.4942C46.5492 69.0238 42.5672 74.7394 42.5672 81.385C42.5672 83.5935 43.0069 85.6993 43.8037 87.6196L19.8521 111.571ZM25.715 122.679C28.0868 127.99 30.0808 133.658 31.697 139.54C32.1833 141.31 33.7773 142.562 35.6127 142.562H58.8468H82.0808C83.9163 142.562 85.5102 141.31 85.9966 139.54C87.6127 133.658 89.6067 127.99 91.9784 122.679L79.7125 110.413L69.4523 120.674C69.6143 121.419 69.6996 122.194 69.6996 122.988C69.6996 128.982 64.8405 133.841 58.8466 133.841C52.8527 133.841 47.9937 128.982 47.9937 122.988C47.9937 116.994 52.8527 112.135 58.8466 112.135C59.5269 112.135 60.1925 112.198 60.838 112.317L71.2272 101.928L65.5319 96.2328C63.4923 97.1526 61.2292 97.6645 58.8466 97.6645C56.4639 97.6645 54.2007 97.1526 52.1611 96.2327L25.715 122.679ZM97.8412 111.571C102.702 103.761 108.605 97.2272 115.547 92.6282C117.824 91.1205 118.4 87.8117 116.74 85.6446C103.845 68.8166 84.1663 26.658 73.3111 2.38697C71.5325 -1.58993 65.4361 -0.299101 65.4361 4.05743V66.4944C71.1441 69.0241 75.126 74.7396 75.126 81.385C75.126 83.5936 74.6862 85.6994 73.8894 87.6198L83.9552 97.6855L97.8412 111.571Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <a href="index.html">NovelAI 帮助文档</a>
+            </h1>
+            <ol class="chapter">
+                <li class="chapter-item expanded "><a href="index.html">图像生成</a></li>
+                <li>
+                    <ol class="section">
+                        <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
+                        <li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li>
+                        <li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li>
+                        <li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li>
+                        <li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li>
+                        <li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a></li>
+                        <li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li>
+                        <li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li>
+                        <li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li>
+                        <li class="chapter-item expanded "><a href="strengthnoise.html">不相似度（Strength）与噪声（Noise）</a></li>
+                        <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
+                        <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
+                        <li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li>
+                        <li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li>
+                        <li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li>
+                        <li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li>
+                    </ol>
+                </li>
+                <li class="chapter-item expanded "><a href="misc.html"><del>杂项</del></a></li>
+                <li>
+                    <ol class="section">
+                        <li class="chapter-item expanded "><a href="uifunctionalities.html"><del>Extra UI Functionalities</del></a></li>
+                    </ol>
+                </li>
+                <li class="chapter-item expanded "><a href="faq.html">常见问题</a></li>
+                <li class="chapter-item expanded "><a href="subscription.html" class="active">订阅</a></li>
+            </ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right-buttons">
+
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <h1 id="subscription"><a class="header" href="subscription.html#subscription">Subscription</a></h1>
+                    <p>A monthly subscription model allows NovelAI to be maintained as a service by Anlatan. Since
+                        NovelAI requires servers and compute upkeep, a subscription model is necessary.</p>
+                    <p>There are many ways to enjoy NovelAI, and here we'll cover some key differences between the
+                        <strong>Subscription</strong> tiers.</p>
+                    <p><img src="assets/tierss.png" alt="The various Subscription tiers." /></p>
+                    <p>    <em><strong><a href="subscription.html#paper-tier-free-trial"><img src="assets/paper.svg"
+                                        width="23">
+                                    Paper</a>            <a href="subscription.html#tablet-tier"><img
+                                        src="assets/tablet.svg" width="23">
+                                    Tablet</a>            <a href="subscription.html#scroll-tier"><img
+                                        src="assets/scroll.svg" width="23">
+                                    Scroll</a>            <a href="subscription.html#opus-tier"><img
+                                        src="assets/opus.svg" width="23">
+                                    Opus</a></strong></em></p>
+                    <p>With the exception of the Paper free trial, these subscriptions renew exactly <strong>30 days
+                            after payment</strong>. In the event that you cancel your subscription, all your tier
+                        privileges will remain in place <strong>until your paid subscription period has ended</strong>.
+                        Keep in mind that you <strong>cannot purchase additional Anlas if you cancel your
+                            subscription</strong>!</p>
+                    <h2 id="paper-tier-free-trial"><a class="header" href="subscription.html#paper-tier-free-trial"><img
+                                src="assets/paper.svg" alt="" />Paper Tier (Free Trial)</a></h2>
+                    <p>You can enjoy some NovelAI features while not subscribed via a <strong>Free Trial</strong> that
+                        allows you to experiment with <strong>Text</strong> generation before deciding on what
+                        <strong>Tier</strong> to subscribe to.</p>
+                    <p>You get 50 free <strong>Text</strong> output generations when accessing the website as a guest,
+                        plus 50 extra generations if you're logged in with an e-mail-verified account, up to a total of
+                        <strong>100 free Text generations.</strong></p>
+                    <p>Also included are 100 free <strong>Text to Speech</strong> generations so you can check out
+                        NovelAI's very own customizable AI voice technology.</p>
+                    <div class="goosetip">
+                        <p><strong>小贴士：</strong> You have access to a wide variety of <strong>Text</strong>
+                            generation settings and features during the free-trial. We usually recommend the default
+                            settings, but feel free to experiment with them!</p>
+                    </div>
+                    <h2 id="tablet-tier"><a class="header" href="subscription.html#tablet-tier"><img
+                                src="assets/tablet.svg" alt="" />Tablet Tier</a></h2>
+                    <p>The most basic NovelAI subscription is the <strong>Tablet</strong> tier, with a cost of
+                        <strong>$10 USD</strong> monthly.<br />
+                        Despite being the cheapest possible option, it already gives you unlimited <strong>Text</strong>
+                        and <strong>Text to Speech</strong> generations for the entire duration of the
+                        subscription.<br />
+                        With a <strong>Tablet</strong> subscription, you can already use the <strong>Text</strong> and
+                        <strong>Voice</strong> generation AI to your heart's content.</p>
+                    <p>Along with <strong>1000 <img src="assets/anla.svg" alt="" />Anlas</strong> for you to use for
+                        <strong>图像生成</strong> and <strong>Module Training</strong>.</p>
+                    <h2 id="scroll-tier"><a class="header" href="subscription.html#scroll-tier"><img
+                                src="assets/scroll.svg" alt="" />Scroll Tier</a></h2>
+                    <p>This is the second tier of NovelAI subscription, costing <strong>$15 USD</strong>.<br />
+                        While very similar to the Tablet tier at a glance, it has access to a setting that makes a big
+                        difference for your storytelling: A larger <strong>Context Size</strong>. That means that the AI
+                        will &quot;remember&quot; more things on a <strong>Scroll</strong> subscriber's story compared
+                        to a Tablet tier.</p>
+                    <p>Of course, the <strong>Scroll</strong> tier also has all the benefits of the Tablet tier,
+                        including the <strong>1000 <img src="assets/anla.svg" alt="" />Anlas</strong> that refill every
+                        month.</p>
+                    <h2 id="opus-tier"><a class="header" href="subscription.html#opus-tier"><img src="assets/opus.svg"
+                                alt="" />Opus Tier</a></h2>
+                    <p>The most premium of the NovelAI subscription tiers.<br />
+                        This subscription costs <strong>$25 USD</strong> per month, but it boasts great bonuses compared
+                        to the other tiers.</p>
+                    <p>Not only does it also feature all of the other tier benefits, it is the only tier with access to
+                        <strong>Krake</strong>, currently NovelAI's best AI storyteller, along with the option of
+                        generating longer outputs with a maximum of <strong>~600 characters</strong> instead of the
+                        usual ~400 characters.<br />
+                        <strong>Opus</strong> also has a special benefit for <strong>图像生成</strong>, allowing you to
+                        generate images <strong>free of <img src="assets/anla.svg" alt="" />Anlas</strong> cost, as long
+                        as they're generated one at a time, without any other image used as a base, are at least
+                        &quot;Normal Sized&quot;, and have a &quot;Steps&quot; value of 28 or less.
+                    </p>
+                    <p>And not only that, Opus subscribers also get a whopping <strong>10,000 <img src="assets/anla.svg"
+                                alt="" />Anlas</strong> refill every month to spend on complex <strong>Custom
+                            Modules</strong> and larger, or more <strong>Image Generations</strong>.</p>
+                    <div class="goosetip">
+                        <p><strong>小贴士：</strong> With Opus you can effectively generate an unlimited amount of
+                            images (up to a specific size), it is the recommended tier for people who want to generate
+                            many images.</p>
+                    </div>
+                    <h3 id="anlas"><a class="header" href="subscription.html#anlas"><img src="assets/anla.svg"
+                                alt="" />Anlas</a></h3>
+                    <p>When you're subscribed to NovelAI, you get unlimited <strong>Text</strong> generation and
+                        <strong>Text to Speech</strong>, but some other features are limited due to upkeep costs. For
+                        those, you can spend your <img src="assets/anla.svg" alt="" /><strong>Anlas</strong>! At the
+                        moment, the only features that require <img src="assets/anla.svg"
+                            alt="" /><strong>Anlas</strong> usage, are Image Generation and <strong>Custom Module
+                            Training.</strong></p>
+                    <p>You receive <img src="assets/anla.svg" alt="" />Anlas when you first subscribe, and it
+                        <strong>refills</strong> whenever your subscription renews.<br />
+                        For example, if you are subscribed to the Tablet tier, and have used only <strong>500 <img
+                                src="assets/anla.svg" alt="" />Anlas</strong> of your initial <strong>1000 <img
+                                src="assets/anla.svg" alt="" />Anlas</strong>, you will receive exactly <strong>500 <img
+                                src="assets/anla.svg" alt="" />Anlas</strong> when your subscription renews.</p>
+                    <p>Additionally, you can purchase <strong>Paid <img src="assets/anla.svg" alt="" />Anlas</strong> as
+                        long as you have a <strong>renewing subscription</strong>. You cannot buy extra Anlas if you are
+                        not currently subscribed, or has a non-renewable gift key subscription.<br />
+                        The purchased <strong><img src="assets/anla.svg" alt="" />Anlas</strong> will be labeled as
+                        <strong>Paid <img src="assets/anla.svg" alt="" />Anlas</strong>, and won't be spent until you've
+                        depleted your refillable <strong>Subscription <img src="assets/anla.svg" alt="" />Anlas</strong>
+                        first. The <strong>Paid <img src="assets/anla.svg" alt="" />Anlas</strong> also don't count
+                        towards the monthly refill, so even if you have more <strong>Total <img src="assets/anla.svg"
+                                alt="" />Anlas</strong> than your initial amount, you will still get the spent
+                        <strong>Subscription <img src="assets/anla.svg" alt="" />Anlas</strong> refilled.</p>
+                    <p><img src="assets/purchaseanlas.png" alt="Anlas Pricing." /></p>
+                    <div class="goosetip">
+                        <p><strong>小贴士：</strong> Since only your spent <strong>Subscription <img
+                                    src="assets/anla.svg" alt="" />Anlas</strong> get refilled, make sure you spend any
+                            leftovers before renewal!</p>
+                    </div>
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="./faq.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                        aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="./faq.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+
+        </nav>
+
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+
+
+
+    <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>FAQ - NovelAI 帮助文档</title>
+
+
+    <!-- Custom HTML head -->
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="NovelAI text and image generation documentation and guidebook.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+
+
+    <link rel="icon" href="./favicon.svg">
+    <link rel="shortcut icon" href="./favicon.png">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+
+    <link href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="./highlight.css">
+    <link rel="stylesheet" href="./tomorrow-night.css">
+    <link rel="stylesheet" href="./ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+
+</head>
+
+<body>
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var path_to_root = "./";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+    </script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('light')
+        html.classList.add(theme);
+        html.classList.add('js');
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <h1 class="menu-title">
+                <div class="nai-icon"><svg width="118" height="143" viewBox="0 0 118 143" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19.8521 111.571C14.9909 103.761 9.08889 97.2271 2.14617 92.6282C-0.129986 91.1205 -0.706675 87.8117 0.95396 85.6446C13.8489 68.8166 33.5273 26.658 44.3824 2.38697C46.1611 -1.58993 52.2575 -0.299101 52.2575 4.05743V66.4942C46.5492 69.0238 42.5672 74.7394 42.5672 81.385C42.5672 83.5935 43.0069 85.6993 43.8037 87.6196L19.8521 111.571ZM25.715 122.679C28.0868 127.99 30.0808 133.658 31.697 139.54C32.1833 141.31 33.7773 142.562 35.6127 142.562H58.8468H82.0808C83.9163 142.562 85.5102 141.31 85.9966 139.54C87.6127 133.658 89.6067 127.99 91.9784 122.679L79.7125 110.413L69.4523 120.674C69.6143 121.419 69.6996 122.194 69.6996 122.988C69.6996 128.982 64.8405 133.841 58.8466 133.841C52.8527 133.841 47.9937 128.982 47.9937 122.988C47.9937 116.994 52.8527 112.135 58.8466 112.135C59.5269 112.135 60.1925 112.198 60.838 112.317L71.2272 101.928L65.5319 96.2328C63.4923 97.1526 61.2292 97.6645 58.8466 97.6645C56.4639 97.6645 54.2007 97.1526 52.1611 96.2327L25.715 122.679ZM97.8412 111.571C102.702 103.761 108.605 97.2272 115.547 92.6282C117.824 91.1205 118.4 87.8117 116.74 85.6446C103.845 68.8166 84.1663 26.658 73.3111 2.38697C71.5325 -1.58993 65.4361 -0.299101 65.4361 4.05743V66.4944C71.1441 69.0241 75.126 74.7396 75.126 81.385C75.126 83.5936 74.6862 85.6994 73.8894 87.6198L83.9552 97.6855L97.8412 111.571Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <a href="./index.html">NovelAI 帮助文档</a>
+            </h1>
+            <ol class="chapter">
+                <li class="chapter-item expanded "><a href="./index.html">图像生成</a></li>
+                <li>
+                    <ol class="section">
+                        <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
+                        <li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li>
+                        <li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li>
+                        <li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li>
+                        <li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li>
+                        <li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a>
+                        </li>
+                        <li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li>
+                        <li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li>
+                        <li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li>
+                        <li class="chapter-item expanded "><a href="strengthnoise.html">不相似度（Strength）与噪声（Noise）</a></li>
+                        <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
+                        <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
+                        <li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li>
+                        <li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li>
+                        <li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li>
+                        <li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li>
+                    </ol>
+                </li>
+                <li class="chapter-item expanded "><a href="./misc.html"><del>杂项</del></a></li>
+                <li>
+                    <ol class="section">
+                        <li class="chapter-item expanded "><a href="./uifunctionalities.html"><del>Extra UI
+                                    Functionalities</del></a></li>
+                    </ol>
+                </li>
+                <li class="chapter-item expanded "><a href="faq.html" class="active">常见问题</a></li>
+                <li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li>
+            </ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right-buttons">
+
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <h1 id="frequently-asked-questions"><a class="header"
+                            href="faq.html#frequently-asked-questions">Frequently Asked Questions</a></h1>
+                    <h2 id="privacy"><a class="header" href="faq.html#privacy">Privacy</a></h2>
+                    <h3 id="are-my-generations-stored"><a class="header" href="faq.html#are-my-generations-stored">Are
+                            my generations stored?</a></h3>
+                    <p>No, none of your generations are stored or saved. Images are generated session wise. If you wish
+                        to keep the generated images, you must manually download them, otherwise your generations are
+                        lost upon refresh or when leaving the Image Generation page.</p>
+                    <h3
+                        id="can-anyone-see-what-i-generate-do-you-keep-track-of-my-prompts-image-uploads-drawings-or-generations">
+                        <a class="header"
+                            href="faq.html#can-anyone-see-what-i-generate-do-you-keep-track-of-my-prompts-image-uploads-drawings-or-generations">Can
+                            anyone see what I generate? Do you keep track of my prompts, image uploads, drawings, or
+                            generations?</a></h3>
+                    <p>No, none of your requests, uploads, edits or generations are logged or stored on our side.</p>
+                    <h3 id="does-novelai-store-image2image-data-such-as-my-uploaded-image-or-canvas-drawings"><a
+                            class="header"
+                            href="faq.html#does-novelai-store-image2image-data-such-as-my-uploaded-image-or-canvas-drawings">Does
+                            NovelAI store Image2Image data such as my Uploaded Image or Canvas drawings?</a></h3>
+                    <p>Images you upload are sent as base64 encoded text to prompt a generation, and are not stored on
+                        NovelAI.</p>
+                    <h3 id="who-holds-the-copyright-of-my-generation-can-i-monetize-my-generations"><a class="header"
+                            href="faq.html#who-holds-the-copyright-of-my-generation-can-i-monetize-my-generations">Who
+                            holds the copyright of my generation? Can I monetize my generations?</a></h3>
+                    <p>NovelAI does not claim any ownership over the images you generate and waives any responsibility
+                        that arises from usage outside the service.</p>
+                    <h3 id="what-if-i-want-to-use-my-generation-outside-of-novelai"><a class="header"
+                            href="faq.html#what-if-i-want-to-use-my-generation-outside-of-novelai">What if I want to use
+                            my generation outside of NovelAI?</a></h3>
+                    <p>NovelAI does not claim copyright protections or ownership of any files. Images are treated as
+                        Content as defined in Section 1.4 in the Terms of Service. You must conduct your own research if
+                        you want to use your generated images for any settings outside NovelAI.</p>
+                    <h3 id="i-refreshed-or-left-the-image-generation-and-now-everything-is-gone-why"><a class="header"
+                            href="faq.html#i-refreshed-or-left-the-image-generation-and-now-everything-is-gone-why">I
+                            refreshed or left the Image Generation and now everything is gone! Why?</a></h3>
+                    <p>Your generations are session-based. Upon closing, <strong>all data is removed, and your history
+                            queue is emptied</strong>. Make sure to frequently <strong>save any content you want to
+                            keep</strong> permanently!</p>
+                    <h2 id="general-tips"><a class="header" href="faq.html#general-tips">General Tips</a></h2>
+                    <h3 id="i-lost-my-text-prompt-seed-or-settings-can-i-restore-them"><a class="header"
+                            href="faq.html#i-lost-my-text-prompt-seed-or-settings-can-i-restore-them">I lost my text
+                            prompt, seed or settings! Can I restore them?</a></h3>
+                    <p>The prompt text, settings and seed of your generations can only be retrieved through the Exif
+                        data of a saved file. If you use the clipboard export option, it will not contain any Exif data.
+                        Images saved with right-click &amp; save do not contain Exif data either. The <strong>save
+                            icon</strong> located to the bottom of the image has to be used for the data to be
+                        contained.</p>
+                    <h2 id="prompt-tips"><a class="header" href="faq.html#prompt-tips">Prompt Tips</a></h2>
+                    <h3 id="how-can-i-restore-a-previous-prompt"><a class="header"
+                            href="faq.html#how-can-i-restore-a-previous-prompt">How can I restore a previous prompt?</a>
+                    </h3>
+                    <p>If you have the image in your History bar, you can use CTRL + Click to restore the prompt and the
+                        previous settings.</p>
+                    <h3 id="how-do-i-avoid-repeating-subjects"><a class="header"
+                            href="faq.html#how-do-i-avoid-repeating-subjects">How do I avoid repeating subjects?</a>
+                    </h3>
+                    <p>If you have a lot of repeat subjects, specifying the subject in your prompt might help as well,
+                        try adding defining tags such as &quot;1girl&quot; (or boy, animal or whatever your focus is),
+                        “solo&quot;, or “single focus”, &quot;couple focus&quot; etc.</p>
+                    <h3 id="the-subject-of-my-prompts-looks-lackluster-what-can-i-do"><a class="header"
+                            href="faq.html#the-subject-of-my-prompts-looks-lackluster-what-can-i-do">The subject of my
+                            prompts looks lackluster. What can I do?</a></h3>
+                    <p>If you feel your generations lack a special something, then try adding tags that are a little
+                        more dynamic or exciting: masterpiece, cinematic shot, highly detailed, dynamic angle, cinematic
+                        shadows, action shot, deep shadows, intricate details, award-winning, beautifully lit, dramatic
+                        angle, intense angle, dynamic angle, cinematic lighting, cinematic angle, masterpiece portrait,
+                        dramatic angle, dramatic shadows etc.</p>
+                    <h3 id="why-are-there-signatures-on-my-generations"><a class="header"
+                            href="faq.html#why-are-there-signatures-on-my-generations">Why are there signatures on my
+                            generations?</a></h3>
+                    <p>The AI associates your type of image with signatures like those found in artists' works, branding
+                        or on specific websites. It has learned the characteristics of different types of works, just
+                        like a person would.</p>
+                    <div class="goosetip">
+                        <p><strong>小贴士：</strong> You can try adding unwanted generation aspects to your Undesired
+                            Content text field, or use Edit Image, paint over the area with a matching color and run the
+                            same prompt again.</p>
+                    </div>
+                    <h3 id="does-capitalization-in-my-text-prompt-matter"><a class="header"
+                            href="faq.html#does-capitalization-in-my-text-prompt-matter">Does capitalization in my text
+                            prompt matter?</a></h3>
+                    <p>No. The CLIP embeddings that text prompts are based on are not case-sensitive. Any capitalization
+                        will be ignored.</p>
+                    <h3 id="why-is-everything-generating-the-same-image"><a class="header"
+                            href="faq.html#why-is-everything-generating-the-same-image">Why is everything generating the
+                            same image?</a></h3>
+                    <p>Double check if you are using an <strong>Image2Image</strong> upload or edited canvas by looking
+                        if there is a small thumbnail visible on the left of your text prompt input box.</p>
+                    <p><strong>Example:</strong>
+                        <img src="./assets/thumbnailvisible.png"
+                            alt="There's an Image2Image affecting your generation? Click the little X to remove it." />
+                    </p>
+                    <p>You may also be generating off the same <strong>Seed</strong>, which doesn't allow the AI to make
+                        any further adjustments. Take a look in your sidebar and remove the <strong>Seed</strong> number
+                        if necessary.</p>
+                    <p><img src="./assets/seednumbies.png"
+                            alt="Check your Seed field, if there is a number, remove it." /></p>
+                    <h2 id="will-users-be-able-to-train-their-own-custom-image-generation-modules"><a class="header"
+                            href="faq.html#will-users-be-able-to-train-their-own-custom-image-generation-modules">Will
+                            users be able to train their own Custom Image Generation Modules?</a></h2>
+                    <p>At this time, we do not plan to allow users to create their own Image Modules.</p>
+                    <h2 id="is-the-ai-copying-and-piecing-together-artists-works"><a class="header"
+                            href="faq.html#is-the-ai-copying-and-piecing-together-artists-works">Is the AI copying and
+                            piecing together artists' works!?</a></h2>
+                    <p>Nope, that's not quite how it works! Some great explanations on the topic can be found here:</p>
+                    <ul>
+                        <li><a href="https://twitter.com/ai__pub/status/1561362542487695360">Explaining Diffusion based
+                                Image Generation</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=SVcsDDABEkM&amp;feature=youtu.be">Vox AI Art
+                                Explanation on YouTube</a></li>
+                        <li><a href="https://threadreaderapp.com/thread/1564878372185989120.html">The AI isn't an
+                                automatic Collage Machine</a></li>
+                    </ul>
+                    <h2 id="general-questions"><a class="header" href="faq.html#general-questions">General Questions</a>
+                    </h2>
+                    <h2 id="i-want-to-post-my-work-on-social-media-is-there-a-tag-i-can-use"><a class="header"
+                            href="faq.html#i-want-to-post-my-work-on-social-media-is-there-a-tag-i-can-use">I want to
+                            post my work on Social Media! Is there a tag I can use?</a></h2>
+                    <p>Feel free to tag us on social media, such as Twitter <strong>@novelaiofficial</strong>, and tag
+                        your generations with #NovelAI or #NAIDiffusion so we can follow the journey of your creations!
+                    </p>
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="./uifunctionalities.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="./subscription.html" class="mobile-nav-chapters next" title="Next chapter"
+                        aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="./uifunctionalities.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+
+            <a rel="next" href="./subscription.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </nav>
+
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+
+
+
+    <script src="./clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+
+
+</body>
+
+</html>
