@@ -8,7 +8,7 @@
 
 
     <!-- Custom HTML head -->
-    
+
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="NovelAI text and image generation documentation and guidebook.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +26,7 @@
     <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
 
-    <link
-        href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+    <link href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
         rel="stylesheet" />
 
     <!-- Highlight.js Stylesheets -->
@@ -98,7 +97,31 @@
                 </div>
                 <a href="./index.html">NovelAI 帮助文档</a>
             </h1>
-            <ol class="chapter"><li class="chapter-item expanded "><a href="./index.html">图像生成</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basics.html">基本操作</a></li><li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li><li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li><li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li><li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li><li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a></li><li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li><li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li><li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li><li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li><li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li><li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li><li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li><li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li><li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li><li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li><li class="chapter-item expanded "><a href="sampling.html" class="active">高级：采样（Sampling）</a></li></ol></li><li class="chapter-item expanded "><a href="./misc.html"><del>杂项</del></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="./uifunctionalities.html"><del>Extra UI Functionalities</del></a></li></ol></li><li class="chapter-item expanded "><a href="faq.html">常见问题</a></li><li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li></ol>
+            <ol class="chapter">
+                <li class="chapter-item expanded "><a href="./index.html">图像生成</a></li>
+                <li>
+                    <ol class="section">
+                        <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
+                        <li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li>
+                        <li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li>
+                        <li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li>
+                        <li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a>
+                        </li>
+                        <li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li>
+                        <li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li>
+                        <li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li>
+                        <li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li>
+                        <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
+                        <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
+                        <li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词</a></li>
+                        <li class="chapter-item expanded "><a href="sampling.html" class="active">高级：采样（Sampling）</a>
+                        </li>
+                    </ol>
+                </li>
+                <li class="chapter-item expanded "><a href="faq.html">常见问题</a></li>
+                <li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li>
+            </ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -106,7 +129,7 @@
     <div id="page-wrapper" class="page-wrapper">
 
         <div class="page">
-                        <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar-hover-placeholder"></div>
             <div id="menu-bar" class="menu-bar sticky bordered">
                 <div class="left-buttons">
                     <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
@@ -143,58 +166,98 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="sampling-methods"><a class="header" href="sampling.html#sampling-methods">Sampling Methods</a></h1>
-<p>For image generation, <strong>Samplers</strong> are used to tell the AI how it should start generating visual patterns from the initial noise.<br />
-NovelAI supports a wide variety of <strong>Sampling Methods</strong>:<br />
-<strong>DPM++ 2M</strong>, <strong>Euler Ancestral</strong>, Euler, DPM2, DPM++ 2S Ancestral, DPM++ SDE, DPM Fast, and DDIM.</p>
-<p>Different <strong>Samplers</strong> generate different images, but the differences may not always be obvious or predictable.</p>
-<p><img src="./assets/samplerfromnoise.png" alt="Sampler comparison." /></p>
-<div class="goosetip">
-<p>小贴士： It's easier to see the differences between <strong>Samplers</strong> on images with very low <strong>Steps</strong> values. But such low values aren't recommended for normal image generation.</p>
-</div>
-<p><strong>DPM++ 2M</strong> and <strong>Euler_Ancestral</strong> are our recommended samplers, due to their consistent, high-quality generations in combination with NovelAI Diffusion. We highly recommend leaving the <strong>Sampler</strong> setting as is, unless you have a deeper knowledge of Image Generation.</p>
-<h2 id="special-samplers-smea--smea-dyn"><a class="header" href="sampling.html#special-samplers-smea--smea-dyn">Special Samplers: SMEA &amp; SMEA DYN</a></h2>
-<h3 id="what-is-nai-smea"><a class="header" href="sampling.html#what-is-nai-smea">What is NAI SMEA?</a></h3>
-<p><strong>S</strong>inusoidal <strong>M</strong>ultipass <strong>E</strong>uler <strong>A</strong>ncestral (<strong>SMEA</strong>) is a new sampler developed with the goal of improving overall coherency and quality, especially at higher resolutions. Based on the Euler ancestral sampler, we created a new sine-based schedule that interpolates between multiple passes of the regular diffusion model as sampling progresses. This approach ensures that <em>Stable Diffusion</em> attends to both local and global features. Oftentimes when sampling at higher resolutions with the conventional samplers, <em>Stable Diffusion</em> can produce repeats of the same subjects or bizarre anatomy, this is largely due to poor global attention at higher resolutions <strong>NAI SMEA</strong> aims to solve that.</p>
-<p><strong>All the normal samplers have SMEA versions and SMEA DYN variants.</strong><br />
-<em>(Except for the DDIM sampler, which doesn't support SMEA.)</em></p>
-<h3 id="smea--smea-dyn-are-perfect-for-higher-resolutions"><a class="header" href="sampling.html#smea--smea-dyn-are-perfect-for-higher-resolutions">SMEA &amp; SMEA DYN are perfect for higher resolutions!</a></h3>
-<p>The differences between these two samplers variations are most obvious for higher resolution images. While both work better than normal samplers for high resolution image generation, <strong>SMEA DYN</strong> focuses less time on lower generations and begins to shine dynamically in the mid to high range of a generation. We've noticed slightly more refined compositions.<br />
-Ultimately, the effectiveness of each sampler will depend on the specific use case and image resolution.</p>
-<h3 id="pricing"><a class="header" href="sampling.html#pricing">Pricing:</a></h3>
-<p><strong>Why is SMEA more expensive?</strong><br />
-<strong>SMEA</strong> samplers run multiple passes of the <em>Unet</em> during each step. It costs slightly more than the normal samplers based on the increased compute cost, the increase is relative to the increased amount of time it takes the GPU to process a request.</p>
-<h3 id="auto-smea-toggle-option"><a class="header" href="sampling.html#auto-smea-toggle-option">Auto SMEA Toggle Option</a></h3>
-<p><img src="./assets/autonaismea.png" alt="Auto nai_smea toggle" /></p>
-<p>There is a default option to <strong>Auto</strong> apply <strong>SMEA</strong> for images over 1024x1024 and above pixels, so you don't have to worry about when you should or shouldn't use it.</p>
-<div class="goosetip">
-<p>小贴士： With the <strong>Auto</strong> setting enabled, you can still easily swap between using just <strong>SMEA</strong> or <strong>SMEA DYN</strong>. You can also disable the <strong>Auto</strong> toggle and generate high resolution images without <strong>SMEA</strong>, but it's not recommended!</p>
-</div>
-<h3 id="tips"><a class="header" href="sampling.html#tips">Tips:</a></h3>
-<p><strong>SMEA</strong> and <strong>SMEA DYN</strong> samplers react differently to the Step and Prompt Guidance settings. For example, the Guidance values can go much higher before becoming unpredictable. You may want to increase the Guidance value if you are generating at higher resolutions.</p>
-<p>If you have a particularly short prompt that seemingly performs badly, you can try copy-pasting it into the prompt field repeatedly. We've noted that this can solve issues during testing.</p>
-<p>Sometimes the sampler may focus on different aspects of your prompt that differ from the previous defaults:<br />
-You can alleviate this with emphasis and de-emphasizing aspects of your prompt.<br />
-(See <a href="strengthening-weakening.html">Strengthening &amp; Weakening Vectors</a>)</p>
-<p>We recommend experimenting to find your preferred values with samplers!</p>
-<h3 id="sampler-comparisons"><a class="header" href="sampling.html#sampler-comparisons">Sampler Comparisons</a></h3>
-<p>These high resolution images were all generated using the same prompt, settings and seed. The only differences between them were the <strong>Samplers</strong> as well as the <strong>SMEA</strong> and <strong>DYN</strong> toggles.</p>
-<p><img src="./assets/naismeacomparisons.png" alt="NAI SMEA comparison." /></p>
+                    <h1 id="sampling-methods"><a class="header" href="sampling.html#sampling-methods">Sampling
+                            Methods</a></h1>
+                    <p>For image generation, <strong>Samplers</strong> are used to tell the AI how it should start
+                        generating visual patterns from the initial noise.<br />
+                        NovelAI supports a wide variety of <strong>Sampling Methods</strong>:<br />
+                        <strong>DPM++ 2M</strong>, <strong>Euler Ancestral</strong>, Euler, DPM2, DPM++ 2S Ancestral,
+                        DPM++ SDE, DPM Fast, and DDIM.
+                    </p>
+                    <p>Different <strong>Samplers</strong> generate different images, but the differences may not always
+                        be obvious or predictable.</p>
+                    <p><img src="./assets/samplerfromnoise.png" alt="Sampler comparison." /></p>
+                    <div class="goosetip">
+                        <p>小贴士： It's easier to see the differences between <strong>Samplers</strong> on images with very
+                            low <strong>Steps</strong> values. But such low values aren't recommended for normal image
+                            generation.</p>
+                    </div>
+                    <p><strong>DPM++ 2M</strong> and <strong>Euler_Ancestral</strong> are our recommended samplers, due
+                        to their consistent, high-quality generations in combination with NovelAI Diffusion. We highly
+                        recommend leaving the <strong>Sampler</strong> setting as is, unless you have a deeper knowledge
+                        of Image Generation.</p>
+                    <h2 id="special-samplers-smea--smea-dyn"><a class="header"
+                            href="sampling.html#special-samplers-smea--smea-dyn">Special Samplers: SMEA &amp; SMEA
+                            DYN</a></h2>
+                    <h3 id="what-is-nai-smea"><a class="header" href="sampling.html#what-is-nai-smea">What is NAI
+                            SMEA?</a></h3>
+                    <p><strong>S</strong>inusoidal <strong>M</strong>ultipass <strong>E</strong>uler
+                        <strong>A</strong>ncestral (<strong>SMEA</strong>) is a new sampler developed with the goal of
+                        improving overall coherency and quality, especially at higher resolutions. Based on the Euler
+                        ancestral sampler, we created a new sine-based schedule that interpolates between multiple
+                        passes of the regular diffusion model as sampling progresses. This approach ensures that
+                        <em>Stable Diffusion</em> attends to both local and global features. Oftentimes when sampling at
+                        higher resolutions with the conventional samplers, <em>Stable Diffusion</em> can produce repeats
+                        of the same subjects or bizarre anatomy, this is largely due to poor global attention at higher
+                        resolutions <strong>NAI SMEA</strong> aims to solve that.</p>
+                    <p><strong>All the normal samplers have SMEA versions and SMEA DYN variants.</strong><br />
+                        <em>(Except for the DDIM sampler, which doesn't support SMEA.)</em>
+                    </p>
+                    <h3 id="smea--smea-dyn-are-perfect-for-higher-resolutions"><a class="header"
+                            href="sampling.html#smea--smea-dyn-are-perfect-for-higher-resolutions">SMEA &amp; SMEA DYN
+                            are perfect for higher resolutions!</a></h3>
+                    <p>The differences between these two samplers variations are most obvious for higher resolution
+                        images. While both work better than normal samplers for high resolution image generation,
+                        <strong>SMEA DYN</strong> focuses less time on lower generations and begins to shine dynamically
+                        in the mid to high range of a generation. We've noticed slightly more refined
+                        compositions.<br />
+                        Ultimately, the effectiveness of each sampler will depend on the specific use case and image
+                        resolution.</p>
+                    <h3 id="pricing"><a class="header" href="sampling.html#pricing">Pricing:</a></h3>
+                    <p><strong>Why is SMEA more expensive?</strong><br />
+                        <strong>SMEA</strong> samplers run multiple passes of the <em>Unet</em> during each step. It
+                        costs slightly more than the normal samplers based on the increased compute cost, the increase
+                        is relative to the increased amount of time it takes the GPU to process a request.
+                    </p>
+                    <h3 id="auto-smea-toggle-option"><a class="header" href="sampling.html#auto-smea-toggle-option">Auto
+                            SMEA Toggle Option</a></h3>
+                    <p><img src="./assets/autonaismea.png" alt="Auto nai_smea toggle" /></p>
+                    <p>There is a default option to <strong>Auto</strong> apply <strong>SMEA</strong> for images over
+                        1024x1024 and above pixels, so you don't have to worry about when you should or shouldn't use
+                        it.</p>
+                    <div class="goosetip">
+                        <p>小贴士： With the <strong>Auto</strong> setting enabled, you can still easily swap between using
+                            just <strong>SMEA</strong> or <strong>SMEA DYN</strong>. You can also disable the
+                            <strong>Auto</strong> toggle and generate high resolution images without
+                            <strong>SMEA</strong>, but it's not recommended!</p>
+                    </div>
+                    <h3 id="tips"><a class="header" href="sampling.html#tips">Tips:</a></h3>
+                    <p><strong>SMEA</strong> and <strong>SMEA DYN</strong> samplers react differently to the Step and
+                        Prompt Guidance settings. For example, the Guidance values can go much higher before becoming
+                        unpredictable. You may want to increase the Guidance value if you are generating at higher
+                        resolutions.</p>
+                    <p>If you have a particularly short prompt that seemingly performs badly, you can try copy-pasting
+                        it into the prompt field repeatedly. We've noted that this can solve issues during testing.</p>
+                    <p>Sometimes the sampler may focus on different aspects of your prompt that differ from the previous
+                        defaults:<br />
+                        You can alleviate this with emphasis and de-emphasizing aspects of your prompt.<br />
+                        (See <a href="strengthening-weakening.html">Strengthening &amp; Weakening Vectors</a>)</p>
+                    <p>We recommend experimenting to find your preferred values with samplers!</p>
+                    <h3 id="sampler-comparisons"><a class="header" href="sampling.html#sampler-comparisons">Sampler
+                            Comparisons</a></h3>
+                    <p>These high resolution images were all generated using the same prompt, settings and seed. The
+                        only differences between them were the <strong>Samplers</strong> as well as the
+                        <strong>SMEA</strong> and <strong>DYN</strong> toggles.</p>
+                    <p><img src="./assets/naismeacomparisons.png" alt="NAI SMEA comparison." /></p>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="promptmixing.html" class="mobile-nav-chapters previous"
-                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="promptmixing.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                        aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-
-                    <a rel="next" href="./misc.html" class="mobile-nav-chapters next"
-                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-
                     <div style="clear: both"></div>
                 </nav>
             </div>
@@ -204,11 +267,6 @@ You can alleviate this with emphasis and de-emphasizing aspects of your prompt.<
             <a rel="prev" href="promptmixing.html" class="nav-chapters previous" title="Previous chapter"
                 aria-label="Previous chapter" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
-            </a>
-
-            <a rel="next" href="./misc.html" class="nav-chapters next" title="Next chapter"
-                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <i class="fa fa-angle-right"></i>
             </a>
         </nav>
 

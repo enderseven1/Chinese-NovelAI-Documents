@@ -8,7 +8,7 @@
 
 
     <!-- Custom HTML head -->
-    
+
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="NovelAI text and image generation documentation and guidebook.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +26,7 @@
     <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
 
-    <link
-        href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+    <link href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
         rel="stylesheet" />
 
     <!-- Highlight.js Stylesheets -->
@@ -98,7 +97,30 @@
                 </div>
                 <a href="./index.html">NovelAI 帮助文档</a>
             </h1>
-            <ol class="chapter"><li class="chapter-item expanded "><a href="./index.html">图像生成</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basics.html">基本操作</a></li><li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li><li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li><li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li><li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li><li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a></li><li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li><li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li><li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li><li class="chapter-item expanded "><a href="strengthnoise.html" class="active">强度（Strength）与噪声（Noise）</a></li><li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li><li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li><li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li><li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li><li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li><li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li><li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li></ol></li><li class="chapter-item expanded "><a href="./misc.html"><del>杂项</del></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="./uifunctionalities.html"><del>Extra UI Functionalities</del></a></li></ol></li><li class="chapter-item expanded "><a href="faq.html">常见问题</a></li><li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li></ol>
+            <ol class="chapter">
+                <li class="chapter-item expanded "><a href="./index.html">图像生成</a></li>
+                <li>
+                    <ol class="section">
+                        <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
+                        <li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li>
+                        <li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li>
+                        <li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li>
+                        <li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a>
+                        </li>
+                        <li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li>
+                        <li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li>
+                        <li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li>
+                        <li class="chapter-item expanded "><a href="strengthnoise.html"
+                                class="active">强度（Strength）与噪声（Noise）</a></li>
+                        <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
+                        <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
+                        <li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词</a></li>
+                        <li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li>
+                    </ol>
+                <li class="chapter-item expanded "><a href="faq.html">常见问题</a></li>
+                <li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li>
+            </ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -106,7 +128,7 @@
     <div id="page-wrapper" class="page-wrapper">
 
         <div class="page">
-                        <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar-hover-placeholder"></div>
             <div id="menu-bar" class="menu-bar sticky bordered">
                 <div class="left-buttons">
                     <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
@@ -143,29 +165,29 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="strength--noise"><a class="header" href="strengthnoise.html#strength--noise">Strength &amp; Noise</a></h1>
-<h2 id="strength"><a class="header" href="strengthnoise.html#strength">Strength</a></h2>
-<p><strong>Strength</strong> defines how much your written prompt will affect the image and how much the AI is allowed to change the initial uploaded image. Higher Strength values allow the AI free rein to reinterpret the image you uploaded. It may help the color scheme or focal topic, depending on the precision of your prompt.</p>
-<div class="goosetip">
-<p><strong>小贴士：</strong> Always keep in mind that if the AI ignores your prompt too much, you may need to give it more room to work with - increase the Prompt Guidance value of your generation!</p>
-</div>
-<h2 id="noise"><a class="header" href="strengthnoise.html#noise">Noise</a></h2>
-<p><strong>Noise</strong> can help the AI add new detail to your image. For example, if you upload an image that has no background but specify a topic in your text prompt, a higher noise ratio will allow the AI to easily add new details rather than thinking that space should remain empty. Keep in mind that repeated generations with a lot of noise may start to show visual artifacts and degrade over interactions.</p>
-<div class="goosetip">
-<p><strong>小贴士：</strong> You can lower both <strong>Strength</strong> and <strong>Noise</strong> down to their minimum values, this should generate a perfect copy of your image. Allowing you to use <strong><a href="enhance.html">Enhance</a></strong>, <strong><a href="upscale.html">Upscale</a></strong>, or other similar tools.</p>
-</div>
+                    <h1 id="strength--noise"><a class="header" href="strengthnoise.html#strength--noise">强度（Strength）与噪声（Noise）</a></h1>
+                    <h2 id="strength"><a class="header" href="strengthnoise.html#strength">强度</a></h2>
+                    <p><strong>强度（Strength）</strong>会影响成品与原图和提示词的相似度，强度越高改动幅度越大，可能有助于配色方案或焦点主题，具体取决于提示的精度。</p>
+                    <div class="goosetip">
+                        <p><strong>小贴士：</strong>如果成品与提示词不太相符，可能需要增加提示词的精度。</p>
+                    </div>
+                    <h2 id="noise"><a class="header" href="strengthnoise.html#noise">噪声</a></h2>
+                    <p><strong>噪声（Noise）</strong>可以为成品添加新的细节。例如原图没有背景，但在文本提示中指定了主题，较高的噪声会为其增加细节，并不会保持空白。噪声太高可能会产生瑕疵。</p>
+                    <div class="goosetip">
+                        <p><strong>小贴士：</strong>将<strong>强度</strong>和<strong>噪声</strong>降到最低可能会生成几乎相同的图像，允许使用<strong><a href="enhance.html">增强图像（Enhance）</a></strong>或其他类似工具。</p>
+                    </div>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="controltools.html" class="mobile-nav-chapters previous"
-                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="controltools.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                        aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="editimagecanvas.html" class="mobile-nav-chapters next"
-                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="editimagecanvas.html" class="mobile-nav-chapters next" title="Next chapter"
+                        aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
 

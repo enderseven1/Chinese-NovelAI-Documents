@@ -8,7 +8,7 @@
 
 
     <!-- Custom HTML head -->
-    
+
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="NovelAI text and image generation documentation and guidebook.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +26,7 @@
     <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
 
-    <link
-        href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+    <link href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
         rel="stylesheet" />
 
     <!-- Highlight.js Stylesheets -->
@@ -98,7 +97,30 @@
                 </div>
                 <a href="./index.html">NovelAI 帮助文档</a>
             </h1>
-            <ol class="chapter"><li class="chapter-item expanded "><a href="./index.html">图像生成</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basics.html">基本操作</a></li><li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li><li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li><li class="chapter-item expanded "><a href="strengthening-weakening.html" class="active">增减Tag权重</a></li><li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li><li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a></li><li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li><li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li><li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li><li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li><li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li><li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li><li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li><li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li><li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li><li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li><li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li></ol></li><li class="chapter-item expanded "><a href="./misc.html"><del>杂项</del></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="./uifunctionalities.html"><del>Extra UI Functionalities</del></a></li></ol></li><li class="chapter-item expanded "><a href="faq.html">常见问题</a></li><li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li></ol>
+            <ol class="chapter">
+                <li class="chapter-item expanded "><a href="./index.html">图像生成</a></li>
+                <li>
+                    <ol class="section">
+                        <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
+                        <li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li>
+                        <li class="chapter-item expanded "><a href="strengthening-weakening.html"
+                                class="active">增减Tag权重</a></li>
+                        <li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li>
+                        <li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a>
+                        </li>
+                        <li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li>
+                        <li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li>
+                        <li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li>
+                        <li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li>
+                        <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
+                        <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
+                        <li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词</a></li>
+                        <li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li>
+                    </ol>
+                <li class="chapter-item expanded "><a href="faq.html">常见问题</a></li>
+                <li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li>
+            </ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -106,7 +128,7 @@
     <div id="page-wrapper" class="page-wrapper">
 
         <div class="page">
-                        <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar-hover-placeholder"></div>
             <div id="menu-bar" class="menu-bar sticky bordered">
                 <div class="left-buttons">
                     <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
@@ -143,43 +165,37 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="strengthening--weakening-vectors"><a class="header" href="strengthening-weakening.html#strengthening--weakening-vectors">Strengthening &amp; Weakening Vectors</a></h1>
-<p>You can control the AI’s finer focus during a generation by encasing the text you want to emphasize or weaken with <code>{ }</code> for strength, and <code>[ ]</code> for weakening.</p>
-<p>This works both in the Text Prompt and in the Undesired Content field.</p>
-<h2 id="example"><a class="header" href="strengthening-weakening.html#example">Example</a></h2>
-<p><code>cat on a {{{pink}}} cherry blossom tree</code></p>
-<h2 id="how-it-works"><a class="header" href="strengthening-weakening.html#how-it-works">How it works</a></h2>
-<p>The weight of AI focus will be multiplied by 1.05 if you enclose the tags or text you want the AI to <strong>focus on more</strong> with <strong><code>{</code> and <code>}</code>.</strong></p>
-<p>The weight of AI focus will be divided by 1.05 if you enclose the tags or text you want the AI to <strong>focus on less</strong> with <strong><code>[</code> and <code>]</code>.</strong></p>
-<p>Multiple <code>{</code> or <code>[</code> inside another will multiply the weight each time, so <code>{{</code> would result in the enclosed part of the prompt being weighted by 1.1025.</p>
-<div class="goosetip">
-<p><strong>小贴士：</strong> Don't get confused when using <strong>Strengthening and Weakening</strong> in the <strong>Undesired Content</strong> field. There, words in between <code>{ }</code> will be more avoided more, and words between <code>[ ]</code> will be avoided less!</p>
-</div>
-<h2 id="note"><a class="header" href="strengthening-weakening.html#note">Note</a></h2>
-<p>If you strengthen and weaken multiple times in the middle of a prompt you need to close it with an equal amount of symbols. Otherwise you can forgo counting, simply by putting your selection to emphasize/weaken at the very end of your prompt.</p>
-<p><strong>Example:</strong>
-<code>cat on a cherry blossom tree,</code>
-may generate a occasional greenery, or the cat in the grass, in front of a tree.</p>
-<p><code>cat on a {{{pink}}} cherry blossom tree</code>
-focuses the AI on a pink composition through emhasis.</p>
-<p><code>cat on a cherry blossom tree, {{{pink</code>
-focuses the AI on a pink composition, and  you do not have to count the closing amount to emphazise.</p>
-<p>If you use emphasis and weakening extensively, they can overpower everything else in your prompt, resulting in strange outputs, riddeled with artifacts and other weird depictions.
-In spite of this, experimentation <strong>may yield some interesting results</strong>.</p>
-<p><strong>Example:</strong>
-<code>cat on a cherry blossom tree, {{{{{{{{{{{{{{{{pink</code> causes strange artifacts and pink to leak into our cat.</p>
+                    <h1 id="strengthening--weakening-vectors"><a class="header"
+                            href="strengthening-weakening.html#strengthening--weakening-vectors">增减Tag权重</a></h1>
+                    <p>大括号（<code>{ }</code>）和中括号（<code>[ ]</code>）可以对正面提示词和反面提示词的权重进行增减。</p>
+                    <h2 id="example"><a class="header" href="strengthening-weakening.html#example">用例</a></h2>
+                    <p><code>cat on a {{{pink}}} cherry blossom tree</code></p>
+                    <h2 id="how-it-works"><a class="header" href="strengthening-weakening.html#how-it-works">使用方法</a></h2>
+                    <p><strong>大括号（<code>{}</code>）</strong>会将权重乘以1.05，用于需要<strong>更加突出</strong>的细节上。</p>
+                    <p><strong>中括号（<code>[]</code>）</strong>会将权重除以1.05，用于<strong>不那么重要</strong>的细节上。</p>
+                    <p><code>{</code>和<code>[</code>可以嵌套使用，例如两个大括号（<code>{{</code>）会将权重乘以1.05*1.05=1.1025倍。</p>
+                    <div class="goosetip">
+                        <p><strong>小贴士：</strong><strong>增减权重</strong>也适用于<strong>不需要的特征（Undesired Content，即反面提示词）</strong>中。</p>
+                    </div>
+                    <h2 id="note"><a class="header" href="strengthening-weakening.html#note">注意</a></h2>
+                    <p>提示词两边的括号数量必须相等，否则请使用先后顺序来控制权重（前大后小）。</p>
+                    <p><strong>例如：</strong>输入<code>cat on a cherry blossom tree</code>可能会在树前生成植物或在草丛里生成猫。</p>
+                    <p>输入<code>cat on a {{{pink}}} cherry blossom tree</code>会将重点放在“pink”（粉色）上。</p>
+                    <p>输入<code>cat on a cherry blossom tree, {{{pink</code>会使成品集中在“pink”上，此时提示词不必两边都有括号。</p>
+                    <p>如果滥用括号可能会出现奇怪的内容或者忽略其他提示词，但也可能<strong>出现好东西</strong>。</p>
+                    <p><strong>例如：</strong><code>cat on a cherry blossom tree, {{{{{{{{{{{{{{{{pink</code>会使“pink”或奇怪的东西跑到猫身上。</p>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="tags.html" class="mobile-nav-chapters previous"
-                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="tags.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                        aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="qualitytags.html" class="mobile-nav-chapters next"
-                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="qualitytags.html" class="mobile-nav-chapters next" title="Next chapter"
+                        aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
 

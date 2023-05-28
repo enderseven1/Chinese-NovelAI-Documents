@@ -102,7 +102,6 @@
                 <li>
                     <ol class="section">
                         <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
-                        <li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li>
                         <li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li>
                         <li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li>
                         <li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li>
@@ -114,18 +113,9 @@
                         <li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li>
                         <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
                         <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
-                        <li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li>
-                        <li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li>
                         <li class="chapter-item expanded "><a href="history.html" class="active">历史记录（History）</a></li>
-                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词</a></li>
                         <li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li>
-                    </ol>
-                </li>
-                <li class="chapter-item expanded "><a href="./misc.html"><del>杂项</del></a></li>
-                <li>
-                    <ol class="section">
-                        <li class="chapter-item expanded "><a href="./uifunctionalities.html"><del>Extra UI
-                                    Functionalities</del></a></li>
                     </ol>
                 </li>
                 <li class="chapter-item expanded "><a href="faq.html">常见问题</a></li>
@@ -175,98 +165,44 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="history"><a class="header" href="history.html#history">History</a></h1>
-                    <p>As you generate images multiple times, they will stay saved in the <strong>History</strong> tab
-                        to the right side of the screen, as long as you don't end the session by leaving or refreshing
-                        the page.</p>
+                    <h1 id="history"><a class="header" href="history.html#history">历史记录（History）</a></h1>
+                    <p>当前页面生成的所有图像都会保存在网页右侧的<strong>历史记录（History）</strong>中，刷新或关闭页面则会全部清除。</p>
                     <p><img src="./assets/historytab.gif" alt="The History tab." /></p>
-                    <p>And the <strong>History</strong> tab isn't just for show, it has many useful functionalities that
-                        we're sure will help you a lot.</p>
+                    <p><strong>历史记录</strong>还具有很多有用的功能。</p>
                     <div class="goosetip">
-                        <p><strong>小贴士：</strong> The <strong>History</strong> tab is shown by default when you
-                            access the Image Generation page. But it might be hidden if your resolution is small enough.
-                            But whether the history tab is shown or hidden, all images generated will be stored there.
-                        </p>
+                        <p><strong>小贴士：</strong><strong>历史记录</strong>默认会一直显示，但分辨率过小可能会将其隐藏，不过不会影响保存图像记录。</p>
                     </div>
-                    <h2 id="clicks"><a class="header" href="history.html#clicks">Clicks</a></h2>
-                    <h3 id="go-to-image"><a class="header" href="history.html#go-to-image">Go to Image</a></h3>
-                    <p>Simply clicking a thumbnail in the <strong>History</strong> tab will select it and bring it back
-                        to the center of the UI, where you can look at it in all its glory, check its resolution, its
-                        seed and do things to it such as downloading or upscaling, as if you had just generated it.</p>
+                    <h2 id="clicks"><a class="header" href="history.html#clicks">单击事件</a></h2>
+                    <h3 id="go-to-image"><a class="header" href="history.html#go-to-image">看图</a></h3>
+                    <p>单击<strong>历史记录</strong>中的图像可以放大并查看信息，且可以重新编辑或增强（Enhance）它。</p>
                     <p><img src="./assets/historygo.gif" alt="The History tab." /></p>
-                    <h3 id="copy-settings"><a class="header" href="history.html#copy-settings">Copy Settings</a></h3>
-                    <p>Control+Click a thumbnail in the <strong>History</strong> tab to copy its prompt and undesired
-                        content, along with every setting, except for the seed, to their respective places.</p>
-                    <p>Keep in mind, however, that initial images used for control tools do not get copied.</p>
-                    <h3 id="copy-seed"><a class="header" href="history.html#copy-seed">Copy Seed</a></h3>
-                    <p>Shift+Clicking a thumbnail in the <strong>History</strong> tab will import its image's Seed
-                        straight to the Seed box. Allowing you to generate a similar image, but with your current
-                        changes to the prompt and settings.</p>
+                    <h3 id="copy-settings"><a class="header" href="history.html#copy-settings">选取设定</a></h3>
+                    <p>长按Ctrl并单击<strong>历史记录</strong>中的图像可以将该图像除种子外的所有信息添加到生成信息中，但用于控制工具的初始图像不适用。</p>
+                    <h3 id="copy-seed"><a class="header" href="history.html#copy-seed">选取种子</a></h3>
+                    <p>长按Shift并单击<strong>历史记录</strong>中的图像可以将该图像的种子添加到生成信息中。</p>
                     <div class="goosetip">
-                        <p><strong>小贴士：</strong> You can Control+Shift+Click a thumbnail in order to copy all the
-                            settings and the seed at the same time. This would generate in the same exact image as the
-                            one in <strong>History</strong>, so make sure to change something before trying to generate!
-                        </p>
+                        <p><strong>小贴士：</strong>同时按住Ctrl和Shift并单击<strong>历史记录</strong>中的图像可以将该图像的全部信息添加到生成信息中，但可能会生成与该图像完全相同的图像，所以请修改其中的信息。</p>
                     </div>
-                    <h3 id="delete-image"><a class="header" href="history.html#delete-image">Delete Image</a></h3>
-                    <p>If you want to delete an image from your history, you can do that. As you hover the cursor over a
-                        thumbnail, you will see an X button on its top right. Clicking it will bring out a pop-up asking
-                        if you really want to delete the image.</p>
-                    <p><img src="./assets/historyx.png" alt="The Delete Image button" /></p>
-                    <div class="goosetip">
-                        <p><strong>小贴士：</strong> The images are only saved in <strong>History</strong> while you
-                            remain in a session. So if you refresh or leave the page, you'll effectively delete every
-                            image in your <strong>History</strong>!</p>
-                    </div>
-                    <h2 id="indicators"><a class="header" href="history.html#indicators">Indicators</a></h2>
-                    <p>The thumbnails in the <strong>History</strong> tab will have icons indicating certain aspects of
-                        their generation.</p>
-                    <p>These icons can indicate how many images were generated at once, what Control Tool was used, or
-                        if it was Upscaled or Enhanced.</p>
+                    <h2 id="indicators"><a class="header" href="history.html#indicators">标识</a></h2>
+                    <p><strong>历史记录</strong>中的一些图像会带有标识。这些标识可以指示一次生成的数量或使用的工具。</p>
                     <p><img src="./assets/historyindicators.png" alt="All kinds of indicators" /></p>
-                    <h2 id="download-zip"><a class="header" href="history.html#download-zip">Download ZIP</a></h2>
-                    <p>If you have generated a bunch of images and want to quickly download them all at once, there's a
-                        nifty button at the very bottom of the <strong>History</strong> tab that will do it for you. It
-                        groups all the images into a .zip file and downloads it. Be wary that, depending on how many
-                        images you've generated in the session, it can take a while to download.</p>
-                    <h2 id="pin-image"><a class="header" href="history.html#pin-image">Pin image</a></h2>
-                    <p>While having an image selected, you can click the <strong>pin</strong> icon located <strong>below
-                            the image</strong> to have the image pinned.</p>
-                    <p><img src="./assets/pinimagebutton.png" alt="The pin button" /></p>
-                    <p>When you have a pinned image <strong>hidden behind the left panel</strong>, you can click it to
-                        quickly bring it up to compare to any other image you have selected, while also having quick
-                        access to go back to the pinned image itself, or copy its seed.</p>
-                    <p><img src="./assets/pinnedimage.gif" alt="Pinned image in action" /></p>
-                    <p>Clicking anywhere in the center area, including on the brought up pinned image itself, will hide
-                        it again. You can, however, click anywhere in the <strong>History</strong> tab or the left
-                        panel, so you can navigate the <strong>History</strong> or adjust settings freely while the
-                        pinned image is visible.</p>
+                    <h2 id="download-zip"><a class="header" href="history.html#download-zip">打包下载</a></h2>
+                    <p><strong>历史记录</strong>下的“Download ZIP”（打包下载）按钮可以将历史记录里的所有图像打包为zip文件并下载，时间视图像数量而定。</p>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="inpaint.html" class="mobile-nav-chapters previous" title="Previous chapter"
-                        aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-
                     <a rel="next" href="promptmixing.html" class="mobile-nav-chapters next" title="Next chapter"
                         aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
-
                     <div style="clear: both"></div>
                 </nav>
             </div>
         </div>
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
-            <a rel="prev" href="inpaint.html" class="nav-chapters previous" title="Previous chapter"
-                aria-label="Previous chapter" aria-keyshortcuts="Left">
-                <i class="fa fa-angle-left"></i>
-            </a>
-
             <a rel="next" href="promptmixing.html" class="nav-chapters next" title="Next chapter"
                 aria-label="Next chapter" aria-keyshortcuts="Right">
                 <i class="fa fa-angle-right"></i>

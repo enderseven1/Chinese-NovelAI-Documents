@@ -8,7 +8,7 @@
 
 
     <!-- Custom HTML head -->
-    
+
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="NovelAI text and image generation documentation and guidebook.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +26,7 @@
     <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
 
-    <link
-        href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+    <link href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
         rel="stylesheet" />
 
     <!-- Highlight.js Stylesheets -->
@@ -98,7 +97,31 @@
                 </div>
                 <a href="./index.html">NovelAI 帮助文档</a>
             </h1>
-            <ol class="chapter"><li class="chapter-item expanded "><a href="./index.html">图像生成</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basics.html">基本操作</a></li><li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li><li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li><li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li><li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li><li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a></li><li class="chapter-item expanded "><a href="stepsguidance.html" class="active">迭代步数（Steps）与提示词（Prompt）</a></li><li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li><li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li><li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li><li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li><li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li><li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li><li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li><li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li><li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li><li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li></ol></li><li class="chapter-item expanded "><a href="./misc.html"><del>杂项</del></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="./uifunctionalities.html"><del>Extra UI Functionalities</del></a></li></ol></li><li class="chapter-item expanded "><a href="faq.html">常见问题</a></li><li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li></ol>
+            <ol class="chapter">
+                <li class="chapter-item expanded "><a href="./index.html">图像生成</a></li>
+                <li>
+                    <ol class="section">
+                        <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
+                        <li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li>
+                        <li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li>
+                        <li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li>
+                        <li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a>
+                        </li>
+                        <li class="chapter-item expanded "><a href="stepsguidance.html"
+                                class="active">迭代步数（Steps）与提示词（Prompt）</a></li>
+                        <li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li>
+                        <li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li>
+                        <li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li>
+                        <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
+                        <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
+                        <li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词</a></li>
+                        <li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li>
+                    </ol>
+                </li>
+                <li class="chapter-item expanded "><a href="faq.html">常见问题</a></li>
+                <li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li>
+            </ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -106,7 +129,7 @@
     <div id="page-wrapper" class="page-wrapper">
 
         <div class="page">
-                        <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar-hover-placeholder"></div>
             <div id="menu-bar" class="menu-bar sticky bordered">
                 <div class="left-buttons">
                     <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
@@ -143,34 +166,57 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="steps--prompt-guidance"><a class="header" href="stepsguidance.html#steps--prompt-guidance">Steps &amp; Prompt Guidance</a></h1>
-<h2 id="steps"><a class="header" href="stepsguidance.html#steps">Steps</a></h2>
-<p><img src="./assets/stepsnscale.png" alt="Steps &amp; Guidance" /></p>
-<p><strong>Steps</strong> define the number of iterations the AI should refine from the initial creation of your prompt. You can use a low amount to quickly generate and see the way your image composition is headed, or you can use more <strong>Steps</strong> to generate a full image. Too many <strong>Steps</strong> may also be counterproductive, barely improving the generation. It's recommended to keep <strong>Steps</strong> relatively low until you find a generation with a composition you like, and then use the <strong>Enhance</strong> button on it for further refinement.</p>
-<div class="goosetip">
-<p><strong>小贴士：</strong> If you are subscribed to the <em>Opus</em> tier, images generated with <strong>28</strong> or less <strong>Steps</strong> won't cost any <em>Anlas</em>, as long as the resolution stays under the <em>normal</em> resolution range and they are <em>not</em> generated in batches.</p>
-</div>
-<h2 id="prompt-guidance"><a class="header" href="stepsguidance.html#prompt-guidance">Prompt Guidance</a></h2>
-<p>The <strong>Prompt Guidance</strong> value indicates how much the AI will respond to your prompt.
-A greater value can help the AI stick closer to the overall intent of your text prompt but set too high, and it may have an adverse effect.</p>
-<p>Sometimes the <strong>Prompt Guidance</strong> value will adjust how refined and strong the effect will be: a lower <strong>Guidance</strong> number can be more painterly and softer, while a higher <strong>Guidance</strong> value provides more fine detail and sharpness.</p>
-<p><strong>An average Guidance Guide you can go by:</strong></p>
-<div class="prompt">
-<p><strong>Guidance Value 2 - 6:</strong>
-Allow the AI to loosely interpret the text prompt. Great for psychedelic looks and concepts, as well as fun landscapes. <em>Might be unpredictable!</em><br />
- <br />
-<strong>Guidance Value 7 - 14:</strong>
-Strong guidance towards the text of your prompt.<br />
- <br />
-<strong>Guidance Value 15 - 20:</strong>
-Stricter adherence to your text prompt. Generations may appear cleaner but also stiffer. <em>Visual artifacts may begin to appear!</em> <strong>Decrisper</strong> setting recommended from these values up<br />
- <br />
-<strong>Guidance Value 21+:</strong>
-Overly strong focus on the text prompt. <em>Might be unpredictable!</em></p>
-</div>
-<h3 id="decrisper"><a class="header" href="stepsguidance.html#decrisper">Decrisper</a></h3>
-<p>This setting, that can be activated or deactivated next to the <strong>Prompt Guidance</strong> slider, mitigates certain color and visual artifact issues that can happen when generating images with higher <strong>Guidance</strong>.</p>
-<p>While it is designed and recommended for images with a high <strong>Guidance</strong> value, <strong>Decrisper</strong> has a visible impact on images generated with any <strong>Guidance</strong> value, so you can also use it for lower <strong>Guidance</strong> images if you prefer.</p>
+                    <h1 id="steps--prompt-guidance"><a class="header"
+                            href="stepsguidance.html#steps--prompt-guidance">Steps &amp; Prompt Guidance</a></h1>
+                    <h2 id="steps"><a class="header" href="stepsguidance.html#steps">Steps</a></h2>
+                    <p><img src="./assets/stepsnscale.png" alt="Steps &amp; Guidance" /></p>
+                    <p><strong>Steps</strong> define the number of iterations the AI should refine from the initial
+                        creation of your prompt. You can use a low amount to quickly generate and see the way your image
+                        composition is headed, or you can use more <strong>Steps</strong> to generate a full image. Too
+                        many <strong>Steps</strong> may also be counterproductive, barely improving the generation. It's
+                        recommended to keep <strong>Steps</strong> relatively low until you find a generation with a
+                        composition you like, and then use the <strong>Enhance</strong> button on it for further
+                        refinement.</p>
+                    <div class="goosetip">
+                        <p><strong>小贴士：</strong> If you are subscribed to the <em>Opus</em> tier, images generated with
+                            <strong>28</strong> or less <strong>Steps</strong> won't cost any <em>Anlas</em>, as long as
+                            the resolution stays under the <em>normal</em> resolution range and they are <em>not</em>
+                            generated in batches.</p>
+                    </div>
+                    <h2 id="prompt-guidance"><a class="header" href="stepsguidance.html#prompt-guidance">Prompt
+                            Guidance</a></h2>
+                    <p>The <strong>Prompt Guidance</strong> value indicates how much the AI will respond to your prompt.
+                        A greater value can help the AI stick closer to the overall intent of your text prompt but set
+                        too high, and it may have an adverse effect.</p>
+                    <p>Sometimes the <strong>Prompt Guidance</strong> value will adjust how refined and strong the
+                        effect will be: a lower <strong>Guidance</strong> number can be more painterly and softer, while
+                        a higher <strong>Guidance</strong> value provides more fine detail and sharpness.</p>
+                    <p><strong>An average Guidance Guide you can go by:</strong></p>
+                    <div class="prompt">
+                        <p><strong>Guidance Value 2 - 6:</strong>
+                            Allow the AI to loosely interpret the text prompt. Great for psychedelic looks and concepts,
+                            as well as fun landscapes. <em>Might be unpredictable!</em><br />
+                             <br />
+                            <strong>Guidance Value 7 - 14:</strong>
+                            Strong guidance towards the text of your prompt.<br />
+                             <br />
+                            <strong>Guidance Value 15 - 20:</strong>
+                            Stricter adherence to your text prompt. Generations may appear cleaner but also stiffer.
+                            <em>Visual artifacts may begin to appear!</em> <strong>Decrisper</strong> setting
+                            recommended from these values up<br />
+                             <br />
+                            <strong>Guidance Value 21+:</strong>
+                            Overly strong focus on the text prompt. <em>Might be unpredictable!</em>
+                        </p>
+                    </div>
+                    <h3 id="decrisper"><a class="header" href="stepsguidance.html#decrisper">Decrisper</a></h3>
+                    <p>This setting, that can be activated or deactivated next to the <strong>Prompt Guidance</strong>
+                        slider, mitigates certain color and visual artifact issues that can happen when generating
+                        images with higher <strong>Guidance</strong>.</p>
+                    <p>While it is designed and recommended for images with a high <strong>Guidance</strong> value,
+                        <strong>Decrisper</strong> has a visible impact on images generated with any
+                        <strong>Guidance</strong> value, so you can also use it for lower <strong>Guidance</strong>
+                        images if you prefer.</p>
 
                 </main>
 
@@ -181,8 +227,8 @@ Overly strong focus on the text prompt. <em>Might be unpredictable!</em></p>
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="seed.html" class="mobile-nav-chapters next"
-                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="seed.html" class="mobile-nav-chapters next" title="Next chapter"
+                        aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
 
@@ -197,8 +243,8 @@ Overly strong focus on the text prompt. <em>Might be unpredictable!</em></p>
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a rel="next" href="seed.html" class="nav-chapters next" title="Next chapter"
-                aria-label="Next chapter" aria-keyshortcuts="Right">
+            <a rel="next" href="seed.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter"
+                aria-keyshortcuts="Right">
                 <i class="fa fa-angle-right"></i>
             </a>
         </nav>

@@ -102,7 +102,6 @@
                 <li>
                     <ol class="section">
                         <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
-                        <li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li>
                         <li class="chapter-item expanded "><a href="tags.html" class="active">Tag的使用</a></li>
                         <li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li>
                         <li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li>
@@ -114,20 +113,10 @@
                         <li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li>
                         <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
                         <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
-                        <li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li>
-                        <li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li>
                         <li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li>
-                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词</a></li>
                         <li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li>
                     </ol>
-                </li>
-                <li class="chapter-item expanded "><a href="./misc.html"><del>杂项</del></a></li>
-                <li>
-                    <ol class="section">
-                        <li class="chapter-item expanded "><a href="./uifunctionalities.html"><del>Extra UI
-                                    Functionalities</del></a></li>
-                    </ol>
-                </li>
                 <li class="chapter-item expanded "><a href="faq.html">常见问题</a></li>
                 <li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li>
             </ol>
@@ -175,37 +164,22 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="tagging"><a class="header" href="tags.html#tagging">Tagging</a></h1>
-                    <p>The team seized the opportunity to fill a gap in existing Image Models knowledge and teach the AI
-                        about tags! Tags lend much more control to your prompting and allow for consistency across
-                        different generations.</p>
-                    <p>When you type your image generation prompt, tagging suggestions will appear.</p>
+                    <h1 id="tagging"><a class="header" href="tags.html#tagging">Tag的使用</a></h1>
+                    <p>可以使用提示词控制生成的内容。</p>
                     <p><img src="./assets/prompttags.gif" alt="The AI will suggest tags that it knows!" /></p>
-                    <p>Our completely retrained NovelAI Diffusion now allows you to give the AI much clearer
-                        instructions on what to generate. Since the AI was trained with specific tags, it will be able
-                        to recognize labeled definitions considerably better. </p>
-                    <h2 id="tag-knowledge-indicators"><a class="header" href="tags.html#tag-knowledge-indicators">Tag
-                            Knowledge Indicators</a></h2>
-                    <p>The AI will suggest tags based on what you type, and display corresponding markers indicating how
-                        much knowledge it has of each tag.</p>
+                    <p>可以用更加清晰的Tag生成图像，因为AI是通过特定的Tag训练的。</p>
+                    <h2 id="tag-knowledge-indicators"><a class="header" href="tags.html#tag-knowledge-indicators">Tag熟悉程度</a></h2>
+                    <p>建议中显示的提示词旁会有圆点表示AI对它的熟悉程度。</p>
                     <p><img src="./assets/knowledgedots.png"
                             alt="Tag knowledge is indicated by the opacity of the circles pictured on the right of each tag!" />
                     </p>
-                    <p><strong>The use of tags is not required, but they can play a critical role in steering the AI in
-                            the direction you want.</strong> This will create the illusion that all your characters are
-                        consistent across different generations.</p>
-                    <h3 id="note"><a class="header" href="tags.html#note">Note:</a></h3>
-                    <p>Please keep in mind that the NovelAI Diffusion models will not produce the same results as the
-                        standard Stable Diffusion model, even with the same prompt and seed.</p>
-
+                    <p><strong>不一定完全需要Tag，但可以指明绘画内容。</strong>这也会使图像生成的内容差不多一样。</p>
+                    <h3 id="note"><a class="header" href="tags.html#note">注意：</a></h3>
+                    <p>即使使用相同的提示词和种子也未必能生成相同的图像。
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="models.html" class="mobile-nav-chapters previous" title="Previous chapter"
-                        aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
 
                     <a rel="next" href="strengthening-weakening.html" class="mobile-nav-chapters next"
                         title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
@@ -218,10 +192,6 @@
         </div>
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
-            <a rel="prev" href="models.html" class="nav-chapters previous" title="Previous chapter"
-                aria-label="Previous chapter" aria-keyshortcuts="Left">
-                <i class="fa fa-angle-left"></i>
-            </a>
 
             <a rel="next" href="strengthening-weakening.html" class="nav-chapters next" title="Next chapter"
                 aria-label="Next chapter" aria-keyshortcuts="Right">

@@ -8,7 +8,7 @@
 
 
     <!-- Custom HTML head -->
-    
+
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="NovelAI text and image generation documentation and guidebook.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +26,7 @@
     <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
 
-    <link
-        href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+    <link href="./fonts/css2?family=Eczar:wght@400;600&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
         rel="stylesheet" />
 
     <!-- Highlight.js Stylesheets -->
@@ -98,7 +97,30 @@
                 </div>
                 <a href="./index.html">NovelAI 帮助文档</a>
             </h1>
-            <ol class="chapter"><li class="chapter-item expanded "><a href="./index.html">图像生成</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basics.html">基本操作</a></li><li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li><li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li><li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li><li class="chapter-item expanded "><a href="qualitytags.html" class="active">添加质量标签</a></li><li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a></li><li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li><li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li><li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li><li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li><li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li><li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li><li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li><li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li><li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li><li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li><li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li></ol></li><li class="chapter-item expanded "><a href="./misc.html"><del>杂项</del></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="./uifunctionalities.html"><del>Extra UI Functionalities</del></a></li></ol></li><li class="chapter-item expanded "><a href="faq.html">常见问题</a></li><li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li></ol>
+            <ol class="chapter">
+                <li class="chapter-item expanded "><a href="./index.html">图像生成</a></li>
+                <li>
+                    <ol class="section">
+                        <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
+                        <li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li>
+                        <li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li>
+                        <li class="chapter-item expanded "><a href="qualitytags.html" class="active">添加质量标签</a></li>
+                        <li class="chapter-item expanded "><a href="undesiredcontent.html">不需要的特征（Undesired Content）</a>
+                        </li>
+                        <li class="chapter-item expanded "><a href="stepsguidance.html">迭代步数（Steps）与提示词（Prompt）</a></li>
+                        <li class="chapter-item expanded "><a href="seed.html">种子（Seed）</a></li>
+                        <li class="chapter-item expanded "><a href="controltools.html">图生图（Image2Image）与控制工具</a></li>
+                        <li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li>
+                        <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
+                        <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
+                        <li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词</a></li>
+                        <li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li>
+                    </ol>
+                </li>
+                <li class="chapter-item expanded "><a href="faq.html">常见问题</a></li>
+                <li class="chapter-item expanded "><a href="./subscription.html">订阅</a></li>
+            </ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -106,7 +128,7 @@
     <div id="page-wrapper" class="page-wrapper">
 
         <div class="page">
-                        <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar-hover-placeholder"></div>
             <div id="menu-bar" class="menu-bar sticky bordered">
                 <div class="left-buttons">
                     <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
@@ -143,14 +165,16 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="add-quality-tags-toggle"><a class="header" href="qualitytags.html#add-quality-tags-toggle">Add Quality Tags Toggle</a></h1>
-<p>To enhance the quality of the default image generation, we have an automatic preamble toggle. This <strong>Add Quality Tags</strong> toggle is enabled by default, but you can find it by clicking the cog icon on the top right of the Prompt box.</p>
-<p>If enabled, all prompts will have an automatic addition of <code>masterpiece, best quality, </code> to the beginning of any text prompt unless the toggle is disabled.</p>
-<div class="goosetip">
-<p><strong>小贴士：</strong> This addition is not visible, you will not see the preamble text of &quot;<code>masterpiece, best quality, </code>&quot; in your prompt box or taking space in the token limit bar!</p>
-</div>
-<p><img src="./assets/addqualitytags.gif" alt="Enable or disable the Add Quality Tags toggle." /></p>
-<p>Keep in mind that this setting may bias the AI towards generating pictures of anime characters, so try turning the toggle on and off as you see fit!</p>
+                    <h1 id="add-quality-tags-toggle"><a class="header"
+                            href="qualitytags.html#add-quality-tags-toggle">添加质量标签</a></h1>
+                    <p><strong>添加质量标签</strong>选项可以提高图像的质量，默认开启。</p>
+                    <p>开启后会将<code>masterpiece, best quality, </code>添加到提示词的前面。</p>
+                    <div class="goosetip">
+                        <p><strong>小贴士：</strong>&quot;<code>masterpiece, best quality, </code>&quot;不会显示在提示词框中。</p>
+                    </div>
+                    <p><img src="./assets/addqualitytags.gif" alt="Enable or disable the Add Quality Tags toggle." />
+                    </p>
+                    <p>此开关可能会使成品更偏动漫风格，请酌情开启。</p>
 
                 </main>
 
@@ -161,8 +185,8 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="undesiredcontent.html" class="mobile-nav-chapters next"
-                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="undesiredcontent.html" class="mobile-nav-chapters next" title="Next chapter"
+                        aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
 

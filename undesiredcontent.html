@@ -102,7 +102,6 @@
                 <li>
                     <ol class="section">
                         <li class="chapter-item expanded "><a href="basics.html">基本操作</a></li>
-                        <li class="chapter-item expanded "><a href="models.html">模型（Models）</a></li>
                         <li class="chapter-item expanded "><a href="tags.html">Tag的使用</a></li>
                         <li class="chapter-item expanded "><a href="strengthening-weakening.html">增减Tag权重</a></li>
                         <li class="chapter-item expanded "><a href="qualitytags.html">添加质量标签</a></li>
@@ -114,18 +113,9 @@
                         <li class="chapter-item expanded "><a href="strengthnoise.html">强度（Strength）与噪声（Noise）</a></li>
                         <li class="chapter-item expanded "><a href="editimagecanvas.html">画布（Canvas）</a></li>
                         <li class="chapter-item expanded "><a href="enhance.html">增强图像（Enhance）</a></li>
-                        <li class="chapter-item expanded "><a href="upscale.html"><del>Upscale</del></a></li>
-                        <li class="chapter-item expanded "><a href="inpaint.html"><del>Inpaint</del></a></li>
                         <li class="chapter-item expanded "><a href="history.html">历史记录（History）</a></li>
-                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词（Prompt Mixing）</a></li>
+                        <li class="chapter-item expanded "><a href="promptmixing.html">高级：混合提示词</a></li>
                         <li class="chapter-item expanded "><a href="sampling.html">高级：采样（Sampling）</a></li>
-                    </ol>
-                </li>
-                <li class="chapter-item expanded "><a href="./misc.html"><del>杂项</del></a></li>
-                <li>
-                    <ol class="section">
-                        <li class="chapter-item expanded "><a href="./uifunctionalities.html"><del>Extra UI
-                                    Functionalities</del></a></li>
                     </ol>
                 </li>
                 <li class="chapter-item expanded "><a href="faq.html">常见问题</a></li>
@@ -176,56 +166,40 @@
             <div id="content" class="content">
                 <main>
                     <h1 id="undesired-content"><a class="header"
-                            href="undesiredcontent.html#undesired-content">Undesired Content</a></h1>
-                    <p>The generation settings and prompt input text fields are located on the left side of the screen
-                        on desktop resolutions.</p>
-                    <p>Prompt and <strong>Undesired Content</strong> are different tabs of the same input field.</p>
-                    <p><strong>小贴士：</strong> Prefer the old, separate field? You can even detach the undesired
-                        content input field below the prompt input permanently!</p>
+                            href="undesiredcontent.html#undesired-content">不需要的特征（Undesired Content）</a></h1>
+                    <p>不需要的特征可以在界面右侧下方设置。</p>
+                    <p>提示词和<strong>不需要的特征（反面提示词）</strong>不一样。</p>
                     <p><img src="./assets/ucdetach.gif" alt="Undesired Content Showcase" /></p>
-                    <p>With Undesired Content, you can list anything you want the AI to avoid in future generations.</p>
-                    <div class="goosetip">
-                        <p><strong>小贴士：</strong> See the AI generate something you don't want? Add it to the
-                            Undesired Content field and see if this stops the AI from generating things you don't want
-                            to see!</p>
-                    </div>
-                    <p>You can also select a preset from the cog icon to the top right of the Prompt box and combine it
-                        with your own undesired tags! The recommended ones are enabled by default.</p>
+                    <p>反面提示词可以让AI不要生成哪些内容，输入框上方可以选择预设，默认已选择预设。</p>
                     <p><img src="./assets/Undesiredcontent.png" alt="Undesired Content in the Settings" /></p>
-                    <p>Sometimes you have to think outside of the box to avoid certain problems in generations.</p>
-                    <p><strong>Example:</strong> The tag <code>freckles</code> may create strange artifacts, so if you
-                        add <code>tattoo</code> to your Undesired Content, then it may remove the artifacts while
-                        keeping your freckles intact!</p>
+                    <p><strong>例如：</strong>提示词<code>freckles</code>可能会产生瑕疵，在反面提示词中添加<code>tattoo</code>可能会消除瑕疵。</p>
                     <div id="image-table">
                         <table>
                             <tr>
                                 <td style="padding:4px" width="260px">
                                     <img src="./assets/frklfull2.png" width="512">
-                                    An image with "freckles, body freckles" written as tags in the prompt box.
+                                    freckles, body freckles（未添加反词）
                                                                                                       
                                 </td>
                                 <td style="padding:4px" width="260px">
                                     <img src="./assets/frklfull3.png" width="512">
-                                    Image generated with same settings, but with "((tattoo, facial mark))" manually
-                                    added to Undesired Content.
+                                    添加了反词((tattoo, facial mark))
                                 </td>
                             </tr>
                         </table>
                     </div>
                     <h2 id="undesired-content-presets"><a class="header"
-                            href="undesiredcontent.html#undesired-content-presets">Undesired Content Presets</a></h2>
-                    <p>We noticed that by injecting our automatic presets, the AI avoids some general undesired aspects
-                        and produces higher-quality content.
-                        Here you can see what is added in each preset:</p>
+                            href="undesiredcontent.html#undesired-content-presets">预设</a></h2>
+                    <p>添加预设可以预防黑魔法的出现并提高质量，以下是可以添加的预设。</p>
                     <h2 id="naidiffusion-curated--full"><a class="header"
                             href="undesiredcontent.html#naidiffusion-curated--full">NAIDiffusion Curated &amp; Full</a>
                     </h2>
-                    <p><strong>Low Quality:</strong></p>
+                    <p><strong>低质量（Low Quality:）：</strong></p>
                     <div class="prompt">
                         <p>lowres, text, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature,
                             watermark, username, blurry, </p>
                     </div>
-                    <p><strong>Low Quality + Bad Anatomy:</strong></p>
+                    <p><strong>低质量 + 错误结构（Low Quality + Bad Anatomy）：</strong></p>
                     <div class="prompt">
                         <p>lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits,
                             cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark,
@@ -237,15 +211,15 @@
                             <tr>
                                 <td style="padding:4px" width="33%">
                                     <img src="./assets/frklcurated0.png" width="512" />
-                                    No Default UC
+                                    无预设
                                 </td>
                                 <td style="padding:4px" width="33%">
                                     <img src="./assets/frklcurated1.png" width="512" />
-                                    Low Quality UC
+                                    添加防止低质量的预设
                                 </td>
                                 <td style="padding:4px" width="33%">
                                     <img src="./assets/frklcurated2.png" width="512" />
-                                    Low Quality + Bad Anatomy UC
+                                    添加防止低质量 + 错误结构的预设
                                 </td>
                             </tr>
                         </table>
@@ -253,12 +227,12 @@
                     <p> </p>
                     <h2 id="naidiffusion-furry"><a class="header"
                             href="undesiredcontent.html#naidiffusion-furry">NAIDiffusion Furry</a></h2>
-                    <p><strong>Bad Anatomy:</strong></p>
+                    <p><strong>错误结构（Bad Anatomy）：</strong></p>
                     <div class="prompt">
                         <p>{worst quality}, low quality, distracting watermark, [nightmare fuel], {{unfinished}},
                             deformed, outline, pattern, simple background, </p>
                     </div>
-                    <p><strong>Low Quality:</strong></p>
+                    <p><strong>低质量（Low Quality:）：</strong></p>
                     <div class="prompt">
                         <p>worst quality, low quality, what has science done, what, nightmare fuel, eldritch horror,
                             where is your god now, why, </p>
@@ -269,15 +243,15 @@
                             <tr>
                                 <td style="padding:4px" width="33%">
                                     <img src="./assets/frklfurry0.png" width="512" />
-                                    No Default UC
+                                    无预设
                                 </td>
                                 <td style="padding:4px" width="33%">
                                     <img src="./assets/frklfurry1.png" width="512" />
-                                    Bad Anatomy UC
+                                    添加防止错误结构的预设
                                 </td>
                                 <td style="padding:4px" width="33%">
                                     <img src="./assets/frklfurry2.png" width="512" />
-                                    Low Quality UC
+                                    添加防止低质量的预设
                                 </td>
                             </tr>
                         </table>
